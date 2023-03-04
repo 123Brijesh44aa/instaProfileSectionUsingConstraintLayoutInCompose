@@ -1,0 +1,176 @@
+{
+  ConstraintSets: {
+    start: {
+      headerImage: {
+        width: 'spread',
+        height: 250,
+        top: ['parent', 'top', 0],
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        translationY: 0,
+        alpha: 1,
+      },
+      backMenu: {
+        width: 30,
+        height: 30,
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top', 16],
+      },
+      contentBg: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top', 200],
+        bottom: ['parent', 'bottom', 0],
+      },
+      title: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['parent', 'top', 200],
+      },
+      titleDivider: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['title', 'bottom', 0],
+      },
+      subtitle: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['titleDivider', 'bottom', 0],
+      },
+      subtitleDivider: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['subtitle', 'bottom', 0],
+      },
+      date: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['subtitleDivider', 'bottom', 0],
+      },
+      rowButtonActions: {
+        width: 'spread',
+        height: 70,
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['date', 'bottom', 0],
+        custom: {
+          background: '#DCE0E3'
+        }
+      },
+      longText: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['rowButtonActions', 'bottom', 16],
+        bottom: ['parent', 'bottom', 0],
+      }
+    },
+    end: {
+      headerImage: {
+        width: 'spread',
+        height: 250,
+        top: ['parent', 'top', 0],
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        translationY: -250,
+        alpha: 0.3,
+      },
+      backMenu: {
+        width: 30,
+        height: 30,
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top', 16],
+      },
+      contentBg: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['parent', 'top', 0],
+        bottom: ['parent', 'bottom', 0],
+      },
+      title: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['parent', 'top', 8],
+      },
+      titleDivider: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['title', 'bottom', 0],
+      },
+      subtitle: {
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['titleDivider', 'bottom', 0],
+      },
+      subtitleDivider: {
+        visibility: 'gone',
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['subtitle', 'bottom', 0],
+      },
+      date: {
+        visibility: 'gone',
+        width: 'spread',
+        height: 'wrap',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['subtitleDivider', 'bottom', 0],
+      },
+      rowButtonActions: {
+        width: 'spread',
+        height: 60,
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['date', 'bottom', 0],
+        custom: {
+          background: '#DCE0E3'
+        }
+      },
+      longText: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['rowButtonActions', 'bottom', 0],
+        bottom: ['parent', 'bottom', 0]
+      }
+    }
+  },
+  Transitions: {
+    default: {
+      from: 'start',
+      to: 'end',
+      onSwipe: {
+        anchor: 'contentBg',
+        maxVelocity: 4.2,
+        maxAccel: 3,
+        direction: 'up',
+        side: 'top',
+        mode: 'velocity',
+      },
+    }
+  }
+}
