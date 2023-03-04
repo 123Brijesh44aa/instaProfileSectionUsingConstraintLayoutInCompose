@@ -1,4 +1,4 @@
-# instaProfileSectionUsingConstraintLayoutInCompose
+# instagram Profile Section Using Constraint Layout In Jetpack Compose
 
 Instagram Profile Screen :
 
